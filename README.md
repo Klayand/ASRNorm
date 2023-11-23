@@ -7,7 +7,7 @@ An official implementation of **AFN: Adaptive Fusion Normalization via Encoder-D
 
 #### Single domain generalization accuracies on Digits.  
 
-![image](./asrnorm_digits.png)
+![image](./asrnorm_digits.png)  
 This picture shows the digits experiment in ASRNorm. It uses adversarial data augmentation, and only chooses MNIST as the training set, and the other three as the testing set. Furthermore, it increases the channels of MNIST and USPS to make sure these datasets compatible.
 
 
