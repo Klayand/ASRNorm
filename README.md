@@ -5,7 +5,7 @@ a official implement of **AFN: Adaptive Fusion Normalization via Encoder-Decoder
 # Experiment Results
 ### Domain Generalization
 
-####Single domain generalization accuracies on Digits.  
+#### Single domain generalization accuracies on Digits.  
 - Choosing one as the training set, the rest as testing set. (e.g. MNIST->SVHN, USPS, MNIST-M, SVHN->MNIST, USPS, MNIST-M). Iterate about 4 round **until each dataset is treated as a training set**, get the average accuracies. (30 epochs, learning rate 0.1, SGD)
 **Don`t use any adversarial augmentation like ASRNorm[https://arxiv.org/pdf/2106.01899.pdf].** **Reduce** the channels of ***M-MNIST and SVHN*** to ensure all datasets are compatible.
 
@@ -26,7 +26,7 @@ a official implement of **AFN: Adaptive Fusion Normalization via Encoder-Decoder
 |  AFN  | 33.8| **81.2**| 63.8| **44.8**| 
 
 ------------
-####Single domain generalization accuracies on Cifar10-C.
+#### Single domain generalization accuracies on Cifar10-C.
 - CIFAR-10 is used as the training domain, while CIFAR-10-C with 
 different corruption types and corruption levels are used as the testing 
 domains.
@@ -39,7 +39,7 @@ domains.
 
 ------------
 
-####Single domain generalisation accuracies on PACS. 
+#### Single domain generalisation accuracies on PACS. 
 - One domain is used as the training set and the other domains are used as the testing set.
 
 |   Method|  Art painting | Cartoon  | Sketch  | Photo  |  Avg. |
@@ -51,7 +51,7 @@ domains.
 
 
 ------------
-####Multi-domains generalisation accuracies on PACS. 
+#### Multi-domains generalisation accuracies on PACS. 
 - Multi-domain generalisation accuracies on PACS. One domain is used as the test set and the other domains are used as the training sets. During training, we remove the domain labels.
 
 |   Method|  Art painting | Cartoon  | Sketch  | Photo  |  Avg. |
