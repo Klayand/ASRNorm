@@ -1,6 +1,6 @@
 # AFN
-a pytorch implement of Adversarially Adaptive Normalization for Single Domain Generalization.
-a official implement of **AFN: Adaptive Fusion Normalization via Encoder-Decoder Framework** [https://arxiv.org/abs/2308.03321].
+A pytorch implement of Adversarially Adaptive Normalization for Single Domain Generalization.
+A official implement of **AFN: Adaptive Fusion Normalization via Encoder-Decoder Framework** [https://arxiv.org/abs/2308.03321].
 
 # Experiment Results
 ### Domain Generalization
@@ -9,12 +9,12 @@ a official implement of **AFN: Adaptive Fusion Normalization via Encoder-Decoder
 - Choosing one as the training set, the rest as testing set. (e.g. MNIST->SVHN, USPS, MNIST-M, SVHN->MNIST, USPS, MNIST-M). Iterate about 4 round **until each dataset is treated as a training set**, get the average accuracies. (30 epochs, learning rate 0.1, SGD)
 **Don`t use any adversarial augmentation like ASRNorm[https://arxiv.org/pdf/2106.01899.pdf].** **Reduce** the channels of ***M-MNIST and SVHN*** to ensure all datasets are compatible.
 
-|  Method  | MNIST| SVHN| USPS| MNIST-M| Avg.|
-| ---  ---  ---  --- --- --- ---|  
-|  BN  | 74.0| 30.3| 73.2| 38.7| 54.1|  
-|  BIN  | 71.4| 30.6| 70.6| 42.5| 53.8| 
-|  ASRNorm  |75.6| **34.0**| 70.9| **45.5**| 56.5|
-|  AFN  | **77.6**| 33.8| **73.4**| 44.8| **57.4**|
+|  Method | MNIST  |  SVHN |  USPS |  MNIST-M | Avg.  |
+| ------------ | ------------ | ------------ | ------------ | ------------ | ------------ |
+| BN  | 74.0  | 30.3  | 73.2  | 38.7  | 54.1  |
+|  BIN |  71.4 |  30.6 |  70.6 |  42.5 |  53.8 |
+|  ASRNorm | 75.6  | **34.0**  | 70.9  | **45.5**  | 56.5  |
+|  AFN | **77.6**  | 33.8  | **73.4**  | 44.8  | **57.4**  |
 
 
 - Choosing MNIST as the training set, the rest as testing set. **Don`t use any adversarial augmentation like ASRNorm[https://arxiv.org/pdf/2106.01899.pdf].** **Increase** the channels of ***MNIST and USPS*** to ensure all datasets are compatible.
