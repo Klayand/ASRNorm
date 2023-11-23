@@ -19,8 +19,9 @@ A official implement of **AFN: Adaptive Fusion Normalization via Encoder-Decoder
 
 - Choosing MNIST as the training set, the rest as testing set. **Don`t use any adversarial augmentation like ASRNorm[https://arxiv.org/pdf/2106.01899.pdf].** **Increase** the channels of ***MNIST and USPS*** to ensure all datasets are compatible.
 
-|  Method | SVHN| USPS| MNIST-M| Avg.|
-| ---  ---  ---  --- --- --- |
+
+|  Method |  SVHN |  USPS |  MNIST-M | Avg.  |
+| ------------ | ------------ | ------------ | ------------ | ------------ |
 |  BN  | 27.8| 76.9| 52.7| 52.5| 
 |  ASRNorm  |**34.1**| 78.5| **64.3**| **59.0**| 
 |  AFN  | 33.8| **81.2**| 63.8| **44.8**| 
