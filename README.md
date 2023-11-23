@@ -1,6 +1,6 @@
 # AFN
-A pytorch implement of Adversarially Adaptive Normalization for Single Domain Generalization.
-A official implement of **AFN: Adaptive Fusion Normalization via Encoder-Decoder Framework** [https://arxiv.org/abs/2308.03321].
+A pytorch implementation of Adversarially Adaptive Normalization for Single Domain Generalization.
+An official implementation of **AFN: Adaptive Fusion Normalization via Encoder-Decoder Framework** [https://arxiv.org/abs/2308.03321].
 
 # Experiment Results
 ### Domain Generalization
@@ -8,8 +8,10 @@ A official implement of **AFN: Adaptive Fusion Normalization via Encoder-Decoder
 #### Single domain generalization accuracies on Digits.  
 
 ![image](./asrnorm_digits.png)
+This picture shows the digits experiment in ASRNorm. It uses adversarial data augmentation, and only chooses MNIST as the training set, and the other three as the testing set. Furthermore, it increases the channels of MNIST and USPS to make sure these datasets compatible.
 
-- Choosing one as the training set, the rest as testing set. (e.g. MNIST->SVHN, USPS, MNIST-M, SVHN->MNIST, USPS, MNIST-M). Iterate about 4 round **until each dataset is treated as a training set**, get the average accuracies. (30 epochs, learning rate 0.1, SGD)
+
+- Choosing one as the training set, and the rest as the testing set. (e.g. MNIST->SVHN, USPS, MNIST-M, SVHN->MNIST, USPS, MNIST-M). Iterate about 4 rounds **until each dataset is treated as a training set**, and get the average accuracies. (30 epochs, learning rate 0.1, SGD)
 **Don`t use any adversarial augmentation like ASRNorm[https://arxiv.org/pdf/2106.01899.pdf].** **Reduce** the channels of ***M-MNIST and SVHN*** to ensure all datasets are compatible.
 
 |  Method | MNIST  |  SVHN |  USPS |  MNIST-M | Avg.  |
@@ -20,7 +22,7 @@ A official implement of **AFN: Adaptive Fusion Normalization via Encoder-Decoder
 |  AFN | **77.6**  | 33.8  | **73.4**  | 44.8  | **57.4**  |
 
 
-- Choosing MNIST as the training set, the rest as testing set. **Don`t use any adversarial augmentation like ASRNorm[https://arxiv.org/pdf/2106.01899.pdf].** **Increase** the channels of ***MNIST and USPS*** to ensure all datasets are compatible.
+- Choosing MNIST as the training set, and the rest as the testing set. **Don`t use any adversarial augmentation like ASRNorm[https://arxiv.org/pdf/2106.01899.pdf].** **Increase** the channels of ***MNIST and USPS*** to ensure all datasets are compatible.
 
 
 |  Method |  SVHN |  USPS |  MNIST-M | Avg.  |
