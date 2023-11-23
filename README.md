@@ -6,6 +6,9 @@ A official implement of **AFN: Adaptive Fusion Normalization via Encoder-Decoder
 ### Domain Generalization
 
 #### Single domain generalization accuracies on Digits.  
+
+![image](./asrnorm_digits.png)
+
 - Choosing one as the training set, the rest as testing set. (e.g. MNIST->SVHN, USPS, MNIST-M, SVHN->MNIST, USPS, MNIST-M). Iterate about 4 round **until each dataset is treated as a training set**, get the average accuracies. (30 epochs, learning rate 0.1, SGD)
 **Don`t use any adversarial augmentation like ASRNorm[https://arxiv.org/pdf/2106.01899.pdf].** **Reduce** the channels of ***M-MNIST and SVHN*** to ensure all datasets are compatible.
 
